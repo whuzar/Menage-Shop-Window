@@ -39,15 +39,15 @@
             this.amount_txt = new System.Windows.Forms.TextBox();
             this.price_txt = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.describe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Insertdata = new System.Windows.Forms.Button();
+            this.edit = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,47 +153,7 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(679, 552);
             this.dataGridView1.TabIndex = 10;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 282);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 29);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "By Category";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(12, 332);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 29);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(12, 386);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 29);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(12, 440);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(114, 29);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // name
             // 
@@ -230,14 +190,54 @@
             this.price.Name = "price";
             this.price.Width = 125;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 282);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 29);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "By Category";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Insertdata
+            // 
+            this.Insertdata.Location = new System.Drawing.Point(12, 332);
+            this.Insertdata.Name = "Insertdata";
+            this.Insertdata.Size = new System.Drawing.Size(114, 29);
+            this.Insertdata.TabIndex = 12;
+            this.Insertdata.Text = "Add";
+            this.Insertdata.UseVisualStyleBackColor = true;
+            this.Insertdata.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // edit
+            // 
+            this.edit.Location = new System.Drawing.Point(12, 386);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(114, 29);
+            this.edit.TabIndex = 13;
+            this.edit.Text = "Edit";
+            this.edit.UseVisualStyleBackColor = true;
+            this.edit.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(12, 440);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(114, 29);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Delete";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 603);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.edit);
+            this.Controls.Add(this.Insertdata);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.price_txt);
@@ -273,8 +273,8 @@
         private TextBox price_txt;
         private DataGridView dataGridView1;
         private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button Insertdata;
+        private Button edit;
         private Button button4;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn describe;
